@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Books &amp; Stimulate your Creativity</title>
+    <link rel="stylesheet" href="./Read Books &amp; Stimulate your Creativity_files/create.css">
+</head>
+
+<body>
+    <div id="book">
+        <h1>Read Books &amp; Stimulate your Creativity</h1>
+        <h3>Get best suggestion for books here</h3>
+    </div>
+    <form action="http://127.0.0.1:5500/" method="GET" id="survey">
+        <div class="form_group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="Name:" placeholder="Enter your Name">
+            <label for="age">Age:</label>
+            <input type="number" name="Age:" id="age" placeholder="Enter your age">
+            <label for="email">Email:</label>
+            <input type="email" name="Email:" id="email" placeholder="Enter your email" required="">
+            <label for="genre"> Select Genre:</label>
+          <label><input type="radio" name="genre" id="genre">Science Fiction</label>
+            <label><input type="radio" name="genre" id="genre"> Fantasy</label>
+            <label><input type="radio" name="genre" id="genre">Romance</label>
+           <label> <input type="radio" name="genre" id="genre">Horror</label>
+            <label> <input type="radio" name="genre" id="genre">Mystery</label>
+          <label><input type="radio" name="genre" id="genre"> Others</label> 
+       </div>
+        <div class="form_group">
+            <label for="mode">Which mode you like to prefer to read book?</label>
+            <select name="mode" id="mode" required="">
+                <option disabled="" selected="" value="">Select your mode here</option>
+                <option value="Online Purchase">Online Purchase</option>
+                <option value="Borrow from nearby person">Borrow from nearby person</option>
+                <option value="Read Online">Read Online</option>
+                <option value="Not sure">Not sure</option>
+            </select>
+        </div>
+        <div class="form_group">
+            <label for="comments"> Any comments or Suggestion:</label>
+            <textarea name="suggestion" placeholder="Your respective suggestion or comments." id="" cols="250" rows="7"></textarea>
+        </div>
+        <button type="button" id="submit">Suggest Books</button>
+    </form>
+
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
